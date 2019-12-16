@@ -6,6 +6,14 @@ A micro-USB plug is used as a 5V supply to charge the battery, and a small slide
 
 This board will not work with the almost-identical `MCP73832` chip - the difference is that the 'status' pin has a tri-state output on the `MCP73831` and an open-drain output on the `MCP73832`. So with the former, you can have separate 'charging in progress' and 'done charging' LEDS. But with the latter, you can only have one 'done charging' LED directly connected to the pin. I dunno, maybe that saves you $.005 per unit when you order 10 million at a time or something.
 
+# Board Renders
+
+As seen through OSHPark's purple-colored glasses:
+
+![Top](renders/board_top.png)
+
+![Bottom](renders/board_bot.png)
+
 # Safety
 
 **Before assembling this board or trying to incorporate elements into your design, spend some time ressearching lithium battery safety precautions. Always independently verify lithium battery circuits before assembling them. Never leave lithium batteries unattended when they are charging or in use.**
@@ -25,3 +33,5 @@ I'm not even going to try to make a comprehensive list of safety precautions to 
 * There's no "heartbeat" LED, and it's nice to have at least one user-controlled LED on a board for all kinds of reasons. For one thing, there's no way for the board to indicate that it has a low battery.
 
 * I need to polish a simple test firmware which reads the battery voltage and prints it out over UART every few seconds.
+
+* It's usually silly to use a linear voltage regulator in a simple battery-powered application, because you waste a bunch of power. Using a buck converter would be a better choice here.
