@@ -15,3 +15,13 @@ Here's a link to the datasheet for the battery-charging chip. Double-check your 
 http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf
 
 I'm not even going to try to make a comprehensive list of safety precautions to take when handling lithium batteries, and working with circuitry that interacts with them is even more dangerous. Do your own research on how to work with them safely, start out with small batteries in the 100s of milliAmp-hours, and most importantly, don't blame me if anything goes wrong. The MIT license is very permissive, but it also says there's no warranty :)
+
+# Future Work
+
+* I should use a voltage regulator with a 'power good' pin and connect it to the reset line, to reduce problems with power supply glitches when the battery gets low.
+
+* I haven't tested the USB data lines, and if they do work, there isn't much space to add the optional-but-recommended TVS diodes such as an `SP0503BAHT`. It might be better to use a cheaper microcontroller and only use the USB port for power.
+
+* There's no "heartbeat" LED, and it's nice to have at least one user-controlled LED on a board for all kinds of reasons. For one thing, there's no way for the board to indicate that it has a low battery.
+
+* I need to polish a simple test firmware which reads the battery voltage and prints it out over UART every few seconds.
