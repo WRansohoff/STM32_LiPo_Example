@@ -1,0 +1,17 @@
+Part ID,Part type,Part size (Imperial),Part value,Example Digikey Item,Cost (qty: x),Comment
+"C1, C2, C3, C4",Capacitor,0603,4.7 μF,https://www.digikey.com/short/p2hdqt,$0.68,Decoupling capacitors for the battery charger and voltage regulator. Use X5R or X7R ceramic capacitors rated for at least 6.3V
+"C5, C6",Capacitor,0402,5 pF,https://www.digikey.com/short/pdhnbc,$0.20,Decoupling capacitors for the low-speed external oscillator crystal. Actual values will depend on your crystal; 5pF is a rough estimate. Use C0G / NP0 capacitors.
+"C7, C8",Capacitor,0402,100 nF,https://www.digikey.com/short/p2hrz2,$0.20,Decoupling capacitors for the microcontroller / etc. Prefer X5 or X7 ceramic capacitors.
+C10,Capacitor,0603,1 μF,https://www.digikey.com/short/pdhnbv,$0.10,Decoupling capacitor for the analog voltage supply. Use X7 ceramic capacitors.
+"C9, C11",Capacitor,0402,10 nF,https://www.digikey.com/short/p2hr54,$0.20,Decoupling capacitors for the reset button and analog voltage supply. Use X7 ceramic capacitors.
+FB1,Ferrite Bead,0603,N/A,https://www.digikey.com/short/p2h080,$0.10,Ferrite bead for filtering noise out of the analog voltage supply.
+R1,Resistor,0603,">= 2 KΩ, 1%",https://www.digikey.com/short/pdh2b4,$0.10,"This resistor sets the rate of charge for the battery charger. Charge current = 1000 / R, so use 2KΩ for a 500mA charge rate, 10KΩ for a 100mA charge rate, etc. 500mA is the maximum charge rate. Use resistors with 1% precision to ensure you get the right charge rate."
+"R2, R3",Resistor,0603,220Ω - 4.7KΩ,https://www.digikey.com/short/p2hdw9,$0.20,"Current-limiting resistors for the ""charging"" and ""done charging"" LEDs. Use higher values to make the LEDs dimmer."
+"R4, R5",Resistor,0402,"100 KΩ, 1%",https://www.digikey.com/short/pdh2b7,$0.20,"Resistors for the voltage divider which lets the microcontroller read its own battery voltage. Use resistors with 1% precision, or choose two which have almost identical values."
+J1,USB Connector,Micro-B Socket,N/A,https://www.digikey.com/short/pdhw81,$2.07,"Micro-USB connector for battery charging and USB communication. I'm still working through a reel of cheap-o micro-B sockets that I ordered awhile ago, but they seem to fit the ""Wuerth_629105150521"" footprint in KiCAD."
+"J2, J3",Pin Header,"0.1""",1x12,https://www.digikey.com/short/p1rnnz,$0.60,"Pin headers for the board edges to plug into a breadboard. It's cheaper to bulk-order bunches of 1x40-row breakaway headers, but you can also order them in specific sizes."
+SW1,Slide Switch,SMD,SPDT,https://www.digikey.com/short/pd2qtz,$0.91,Power on/off switch.
+U1,Microcontroller,QFP-32 (7x7 mm),STM32L422KB,https://www.digikey.com/short/p1rdc0,$4.60,"I chose the STM32L422KB because it has a USB peripheral and can operate off of as little as 1.8V. But if you don't care about working USB, an STM32L0 chip would be cheaper. And if you don't care about low-voltage operation, an STM32F0x2 chip would be cheaper."
+U2,Voltage Regulator,SOT-23,AP2210,https://www.digikey.com/short/p1rnv3,$0.42,Simple 3-pin 300mA 3.3V low-dropout linear regulator. They say that good things come in threes...
+U3,Battery Charger,SOT-25,MCP73831,https://www.digikey.com/short/pdhw7v,$0.56,"Battery charging circuit. I use the 4.2V version with ""3.7V nominal / 4.2V charge"" lithium batteries."
+Total,,,,,$11.14,
