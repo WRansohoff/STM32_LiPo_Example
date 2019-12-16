@@ -11,7 +11,6 @@ This board will not work with the almost-identical `MCP73832` chip - the differe
 As seen through OSHPark's purple-colored glasses:
 
 ![Top](renders/board_top.png)
-
 ![Bottom](renders/board_bot.png)
 
 # Safety
