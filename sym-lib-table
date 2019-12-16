@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name STM32L422KB_LiPo)(type Legacy)(uri ${KIPRJMOD}/STM32L422KB_LiPo.lib)(options "")(descr ""))
+)
