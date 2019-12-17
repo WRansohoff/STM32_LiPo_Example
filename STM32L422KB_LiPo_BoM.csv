@@ -13,8 +13,9 @@ D3,LED,0603,Green,https://www.digikey.com/short/pdh21m,$0.14,"""Done"" LED, lit 
 Y1,Crystal,3.2x1.5 mm,32.768 KHz,https://www.digikey.com/short/p2h0zh,$0.41,"""Low-Speed External"" oscillator crystal."
 J1,USB Connector,Micro-B Socket,N/A,https://www.digikey.com/short/pdhw81,$2.07,"Micro-USB connector for battery charging and USB communication. I'm still working through a reel of cheap-o micro-B sockets that I ordered awhile ago, but they seem to fit the ""Wuerth_629105150521"" footprint in KiCAD."
 "J2, J3",Pin Header,"0.1""",1x12,https://www.digikey.com/short/p1rnnz,$0.60,"Pin headers for the board edges to plug into a breadboard. It's cheaper to bulk-order bunches of 1x40-row breakaway headers, but you can also order them in specific sizes."
+J5,Battery Connector,JST PH-2,1x2,https://www.digikey.com/short/p1r08b,$0.17,"JST PH-2 connector for the lithium battery connector. This seems to be a common semi-standard among small ""pouch cells"" and even some prepackaged cylindrical cells."
 SW1,Slide Switch,SMD,SPDT,https://www.digikey.com/short/pd2qtz,$0.91,Power on/off switch.
 U1,Microcontroller,QFP-32 (7x7 mm),STM32L422KB,https://www.digikey.com/short/p1rdc0,$4.60,"I chose the STM32L422KB because it has a USB peripheral and can operate off of as little as 1.8V. But if you don't care about working USB, an STM32L0 chip would be cheaper. And if you don't care about low-voltage operation, an STM32F0x2 chip would be cheaper."
 U2,Voltage Regulator,SOT-23,AP2210,https://www.digikey.com/short/p1rnv3,$0.42,Simple 3-pin 300mA 3.3V low-dropout linear regulator. They say that good things come in threes...
 U3,Battery Charger,SOT-25,MCP73831,https://www.digikey.com/short/pdhw7v,$0.56,"Battery charging circuit. I use the 4.2V version with ""3.7V nominal / 4.2V charge"" lithium batteries."
-Total,,,,,$11.83,
+Total,,,,,$12.00,
