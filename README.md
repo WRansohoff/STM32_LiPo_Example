@@ -34,3 +34,5 @@ I'm not even going to try to make a comprehensive list of safety precautions to 
 * I need to polish a simple test firmware which reads the battery voltage and prints it out over UART every few seconds.
 
 * It's usually silly to use a linear voltage regulator in a simple battery-powered application, because you waste a bunch of power. Using a buck converter would be a better choice here.
+
+* Per [#1](https://github.com/WRansohoff/STM32_LiPo_Example/issues/1), I should connect the `MCP73831` ground pin to a larger ground plane to help it dissipate heat and maybe reach its maximum charge current of 500mA.
